@@ -15,19 +15,56 @@
         <div class="designScreen1">Pantalla INICIO</div>
     </section>
 
-    <section id="screen2" style="display:none" onclick="cambiaPantalla(3)">
-        <div class="designScreen2">Seleccion de Personaje1</div>
+    <section id="screen2" style="display:none">
+        <div class="designScreen2">
+            <div class="personajeOptions">
+                <img id=1 class="perChoosing" src='img/brujaescarlata.png' onclick="selecPersonaje(1)"/>
+                <img id=2 class="perChoosing" src='img/capitanamerica.png' onclick="selecPersonaje(2)"/>
+                <img id=3 class="perChoosing" src='img/groot.png' onclick="selecPersonaje(3)"/>
+                <img id=4 class="perChoosing" src='img/hulk.png' onclick="selecPersonaje(4)"/>
+                <img id=1 class="perChoosing" src='img/ironman.png' onclick="selecPersonaje(5)"/>
+                <img id=2 class="perChoosing" src='img/spiderman.png' onclick="selecPersonaje(6)"/>
+                <img id=3 class="perChoosing" src='img/thor.png' onclick="selecPersonaje(7)"/>
+                <img id=4 class="perChoosing" src='img/viudanegra.png' onclick="selecPersonaje(8)"/>            
+            </div>
+            <div class="personajeSeleccion">
+                <div id="data1" class="dataPersonaje">
+
+                </div>
+                <div id="data2" class="dataPersonaje">
+                
+                </div>
+            </div>
+        </div>    
     </section>
 
-    <section id="screen3" style="display:none" onclick="cambiaPantalla(4)">
-        <div class="designScreen3">Seleccion de personaje2</div>
+    <section id="screen3" style="display:none">
+        <div class="designScreen3">Seleccion de BATALLA
+            <div class="upFigthScreen">
+                <div class="teamContainer">
+                    <div id="picturePer1" class="perFigthDisplay"></div>
+                    <div id="stats1" class="statsDisplay"></div>
+                    <div id="life1"></div>
+                </div>
+                <div class="teamContainer">
+                    <div id="picturePer2" class="perFigthDisplay"></div>
+                    <div id="stats2" class="statsDisplay"></div>
+                    <div id="life2"></div>
+                </div>
+            </div>
+            <div id="botonContenedor" class="bottomFigthScreen" onclick="figth()">
+                <img class="volante" src="img/.jpg" alt="volante_freak"/>
+            </div>
+        </div>
     </section>
 
     <section id="screen4" style="display:none" onclick="cambiaPantalla(1)">
-        <div class="designScreen4">Pantalla Juego</div>
+        <div class="designScreen4">Pantalla FIN
+            <div id="winner" class="ganador"></div>
+        </div>
     </section>
 
-    <script src="js/racers.js"></script>
+    <script src="js/players.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
