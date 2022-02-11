@@ -15,21 +15,21 @@ class player {
         this.vida = 100;
         this.ataque = ataque;
         this.defensa = defensa; 
-        this.suerte = functions.random(1.15);
+        this.suerte = functions.random(1.20);
 
     }
 
     atack() {
         this.vida -= this.suerte;
 
-        this.suerte=functions.random(1.15);
+        this.suerte=functions.random(1.20);
     }
 
 };
 
 //Players
 let player1 = new player("Iron Man",100,60,70,1);
-let player2 = new player("Capitan America",100,30,70,1);
+let player2 = new player("Capitán America",100,30,70,1);
 let player3 = new player("Spiderman",100,40,50,1);
 let player4 = new player("Thor",100,70,50,1);
 
@@ -47,4 +47,3 @@ let team1 = "";
 
 let team2 = "";
 
-let ganador = "";
