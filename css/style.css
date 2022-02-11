@@ -271,7 +271,7 @@ body {
     background-color: black;
 }
 
-#vidaar1, #vidaBar2 {
+#vidaBar1, #vidaBar2 {
     display: flex;
     position: relative;
 
