@@ -1,47 +1,50 @@
 
+//Funcion juego suerte
+const functions = {   
+    random(min, max){
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+}
+
+
 //Declaración de la clase player
 class player {
 
     constructor(nombre, vida, ataque, defensa, foto) {
         this.nombre = nombre;
-        this.vida = vida;
+        this.vida = 100;
         this.ataque = ataque;
-        this.defensa = defensa;
-        this.frenada = frenada;
-        this.foto = foto;
+        this.defensa = defensa; 
+        this.suerte = functions.random(1.15);
+
     }
 
-    atacar() {
-        return this.ataque += 30;
-    }
+    atack() {
+        this.vida -= this.suerte;
 
-    defender() {
-        return this.defensa = 0;
-    }
-
-    recibirDaño = (recibirDaño) => {
-        this.vida -= recibirDaño;
+        this.suerte=functions.random(1.15);
     }
 
 };
 
-//Instanciando corredores...
+//Players
+let player1 = new player("Iron Man",100,60,70,1);
+let player2 = new player("Capitan America",100,30,70,1);
+let player3 = new player("Spiderman",100,40,50,1);
+let player4 = new player("Thor",100,70,50,1);
 
-let player1 = new player("Iron Man",240,60,70);
-let player2 = new player("Hulk",250,50,40);
-let player3 = new player("Thor",260,50,30);
-let player4 = new player("Viuda Negra",200,50,40);
-let player5 = new player("Capitan America",220,30,70);
-let player6 = new player("Spiderman",190,40,50);
-let player7 = new player("Bruja Escarlata",180,70,60);
-let player8 = new player("Groot",170,70,50);
+
+let allPlayers = {
+    1 : player1,
+    2 : player2,
+    3 : player3,
+    4 : player4
+}
 
 //Generando variables básicas de entorno
 
-let allPlayers = [player1,player2,player3,player4,player5,player6,player7,player8];
+let team1 = "";
 
-let team1 = [];
-
-let team2 = [];
+let team2 = "";
 
 let ganador = "";

@@ -11,7 +11,7 @@
 <body>
     
     
-    <section id="screen1" onclick="cambiaPantalla(2)">
+    <section id="screen1" onclick="changeScreen(2)">
         <div class="designScreen1">
             <img class="inicio" src='img/avengersMarvel.png' alt="">
         </div>
@@ -19,21 +19,20 @@
 
     <section id="screen2" class="screen2Seccion" style="display:none">
         <div class="designScreen2">
-            <div class="screen2Titulo">Seleciona tu héroe</div>
-            <div class="personajeOptions">
-                <img id=1 class="perChoosing" src='img/hulk.png' onclick="selecPersonaje(1)"/>
-                <img id=2 class="perChoosing" src='img/capitanamerica.png' onclick="selecPersonaje(2)"/>
-                <img id=3 class="perChoosing" src='img/ironman.png' onclick="selecPersonaje(3)"/>
-                <img id=4 class="perChoosing" src='img/spiderman.png' onclick="selecPersonaje(4)"/>
-                <img id=5 class="perChoosing" src='img/thor.png' onclick="selecPersonaje(5)"/>
+            <div class="screen2Titulo">SELECCIONA TU HÉROE</div>
+            <div class="PlayerOptions">
+                <img id=1 class="perChoosing" src='img/ironman.png' onclick="selectPlayer(1)"/>
+                <img id=2 class="perChoosing" src='img/capitanamerica.png' onclick="selectPlayer(2)"/>
+                <img id=3 class="perChoosing" src='img/spiderman.png' onclick="selectPlayer(3)"/>
+                <img id=4 class="perChoosing" src='img/thor.png' onclick="selectPlayer(4)"/>
 
             
             </div>
-            <div class="personajeSeleccion">
-                <div id="data1" class="dataPersonaje">
+            <div class="PlayerSeleccion">
+                <div id="data1" class="dataPlayer">
 
                 </div>
-                <div id="data2" class="dataPersonaje">
+                <div id="data2" class="dataPlayer">
                 
                 </div>
             </div>
@@ -41,27 +40,24 @@
     </section>
 
     <section id="screen3" style="display:none">
-        <div class="designScreen3">Seleccion de BATALLA
+        <div class="designScreen3">
             <div class="upFigthScreen">
-                <div class="teamContainer">
-                    <div id="picturePer1" class="perFigthDisplay"></div>
-                    <div id="stats1" class="statsDisplay"></div>
-                    <div id="life1"></div>
+                <div class="izq" >
+                    <div class="fighter1"id="imgFighter1"></div>
+                    <div id="stats1" class="vida1"></div>
                 </div>
-                <div class="teamContainer">
-                    <div id="picturePer2" class="perFigthDisplay"></div>
-                    <div id="stats2" class="statsDisplay"></div>
-                    <div id="life2"></div>
+                <div class="med">
+                    <div class="button"><img class="fightLogo" src="img/MarvelLogo.png" alt="fight" onclick="fight()"></div>
                 </div>
-            </div>
-            <div id="botonContenedor" class="bottomFigthScreen" onclick="figth()">
-                <img class="volante" src="img/.jpg" alt="volante_freak"/>
-            </div>
+                <div class="der">
+                    <div class="fighter2"id="imgFighter2"></div>
+                    <div id="stats2" class="vida2"></div>
+                </div>
         </div>
     </section>
 
-    <section id="screen4" style="display:none" onclick="cambiaPantalla(1)">
-        <div class="designScreen4">Pantalla FIN
+    <section id="screen4" style="display:none" onclick="changeScreen(1)">
+        <div class="designScreen4">
             <div id="winner" class="ganador"></div>
         </div>
     </section>
