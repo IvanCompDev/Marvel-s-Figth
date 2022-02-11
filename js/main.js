@@ -77,8 +77,8 @@ const displayGame= () => {
 
 const fight= () => {
 
-    team1.atack();
-    team2.atack();
+    team1.ataque();
+    team2.ataque();
     
     
     if(team1.vida <= 0) {  
