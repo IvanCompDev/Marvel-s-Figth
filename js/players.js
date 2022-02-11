@@ -10,9 +10,9 @@ const functions = {
 //Declaración de la clase player
 class player {
 
-    constructor(nombre, vida, ataque, defensa, foto) {
+    constructor(nombre, vida, ataque, defensa) {
         this.nombre = nombre;
-        this.vida = 100;
+        this.vida = vida;
         this.ataque = ataque;
         this.defensa = defensa; 
         this.suerte = functions.random(1.20);
@@ -28,10 +28,10 @@ class player {
 };
 
 //Players
-let player1 = new player("Iron Man",100,60,70,1);
-let player2 = new player("Capitán America",100,30,70,1);
-let player3 = new player("Spiderman",100,40,50,1);
-let player4 = new player("Thor",100,70,50,1);
+let player1 = new player("Iron Man",200,60,70,1);
+let player2 = new player("Capitán America",200,30,70,1);
+let player3 = new player("Spiderman",200,40,50,1);
+let player4 = new player("Thor",200,70,50,1);
 
 
 let allPlayers = {
